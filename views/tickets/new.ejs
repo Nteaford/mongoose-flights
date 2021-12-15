@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+    <body>
+        <h1>
+       New Ticket
+        </h1>
+
+
+        <form id="new-ticket-form" action="/flights/<%= flight._id %>/tickets" method="POST">
+
+            <label>Seat Assignment:</label>
+            <input name="seat" required pattern="[A-F][1-9]\d?">
+
+            <label>Price:</label>
+            <select name="price">
+                <option value="100">Economy Class</option>
+                <option value="200">Business Class</option>
+                <option value="500">First Class</option>
+            </select> <br>
+
+            <button type="submit" class="btn btn-primary">Add Ticket to List</button>
+
+        </form>
+
+
+        <%- include('../partials/footer') %>
